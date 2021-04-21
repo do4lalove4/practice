@@ -1,15 +1,15 @@
 p.sub-title1{
-    color: rgb(255, 94, 20);
+    color: indigo);
 }
 
 p#sub-title2{
-    color: chartreuse;
+    color: greenyellow;
 }
 
 .company{
     font-weight: bold;
     font-size: larger;
-    color: red;
+    color: cornflowerblue);
 }
 
 div.box1{
@@ -34,7 +34,8 @@ div.box3{
 }
 
 h1{
-    color: aquamarine;
+    color: cornflowerblue;
+    background-color: blanchedalmond;
     font-size: 50pt;
     font-weight: bold;
 }
