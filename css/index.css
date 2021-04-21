@@ -1,3 +1,76 @@
-p {
+p.sub-title1 {
+    color: rgb(255, 94, 20);
+}
+
+p#sub-title2 {
+    color: chartreuse;
+}
+
+.company {
+    font-weight: bold;
+    font-size: larger;
+    color: red;
+}
+
+div.box1 {
+    height: 100px;
+    width: 200px;
+    background-color: rosybrown;
+}
+
+div.box2 {
+    height: 100px;
+    width: 200px;
+    background-color: blanchedalmond;
+}
+
+div.box3 {
+    height: 100px;
+    width: 200px;
+    background-color: cornflowerblue;
+}
+
+h1 {
     color: aquamarine;
+    font-size: 50pt;
+    font-weight: bold;
+}
+
+div{
+    display: inline-block;
+
+}
+
+div.clover_parent{
+    text-align: center;
+    height: 210px;
+    width: 210px;
+}
+
+div.clover1{
+    height: 100px;
+    width: 100px;
+    border-radius: 50% 50% 0 50%;
+    background-color: rgb(110, 218, 88);
+}
+
+div.clover2{
+    height: 100px;
+    width: 100px;
+    border-radius: 50% 50% 50% 0;
+    background-color: rgb(110, 218, 88);
+}
+
+div.clover3{
+    height: 100px;
+    width: 100px;
+    border-radius: 50% 0 50% 50%;
+    background-color: rgb(110, 218, 88);
+}
+
+div.clover4{
+    height: 100px;
+    width: 100px;
+    border-radius: 0 50% 50% 50%;
+    background-color: rgb(110, 218, 88);
 }
