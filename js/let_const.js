@@ -49,7 +49,7 @@ age = age +2;
 console.log(`${name}さんの年齢は${age}です`)
 //let で定義した age は四則演算などで再代入ができる。
 
-name = "東京花子";
+name = "東京花子";　//←エラーが出るのは再代入できないため。
 
 console.log(`${name}さんの年齢は${age}です`)
 //const で定義した name　は再代入できない。
