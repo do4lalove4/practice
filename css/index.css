@@ -1,36 +1,39 @@
-p.sub-title1 {
+p.sub-title1{
     color: rgb(255, 94, 20);
 }
 
-p#sub-title2 {
+p#sub-title2{
     color: chartreuse;
 }
 
-.company {
+.company{
     font-weight: bold;
     font-size: larger;
     color: red;
 }
 
-div.box1 {
+div.box1{
     height: 100px;
     width: 200px;
-    background-color: rosybrown;
+    text-align: center;
+    background-color:  rgb(202, 77, 77)
 }
 
-div.box2 {
+div.box2{
     height: 100px;
     width: 200px;
+    text-align: center;
     background-color: blanchedalmond;
 }
 
-div.box3 {
+div.box3{
     height: 100px;
     width: 200px;
+    text-align: center;
     background-color: cornflowerblue;
 }
 
-h1 {
+h1{
     color: aquamarine;
     font-size: 50pt;
     font-weight: bold;
@@ -38,6 +41,17 @@ h1 {
 
 div{
     display: inline-block;
+}
+
+.clover_title{
+    height: 27px;
+    width: 200px;
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+    color: greenyellow;
+    background-color: indigo;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
 }
 
