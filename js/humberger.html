@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ハンバーガーメニュー</title>
+    <script src="https://kit.fontawesome.com/f56c159de2.js" crossorigin="anonymous"></script>
+    <style type="text/css">
+        body{
+            padding: 0px;
+            margin: 0px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        #main {
+            background-color: whitesmoke;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            padding: 8px;
+            z-index: 2; /* 重なる順番 */
+            overflow: auto;
+            box-sizing: border-box; /*divのボーダーをボックス要素に含める*/
+            transition: .4s;
+        }
+
+        #menu {
+            color: rgb(255, 72, 0);
+            background-color: rgb(255, 230, 0);
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            padding: 8px;
+            width: 180px;
+            min-height: 100%; /*一番小さい高さであってもheightが100%*/
+            z-index: 1; /* 重なる順番 数が大きいほうが上*/
+        }
+
+        #open {
+            float: right;
+            cursor: pointer;
+        }
+
+        #main.menu-open {
+            left: -180px;
+        }
+    </style>
+</head>
+<body>
+    <div id="menu">
+        <ul>
+            <li>Menu1</li>
+            <li>Menu2</li>
+            <li>Menu3</li>
+            <li>Menu4</li>
+            <li>Menu5</li>
+        </ul>
+    </div>
+    <div id="main">
+        <i class="fa fa-bars" id="open"></i>
+        <h1>McDonald</h1>
+        <p>Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello!Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! </p>
+        <p>Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello!Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! </p>
+        <p>Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello!Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! </p>
+        <p>Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello!Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! </p>
+        <p>Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello!Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! </p>
+        <p>Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello!Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! </p>
+        <p>Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello!Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! </p>
+        <p>Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello!Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! </p>
+        <p>Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello!Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! </p>
+    
+    </div>
+    <script>
+        'use strict';
+
+        const open = document.getElementById('open')
+        const main = document.getElementById('main')
+
+        open.addEventListener ('click',() => {
+            if (main.className === 'menu-open') {
+                main.className = '';
+            } else {
+            main.className ='menu-open';
+            }
+        }) 
+
+    </script>
+</body>
+</html>

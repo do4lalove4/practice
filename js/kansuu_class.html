@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>関数とクラス</title>
+</head>
+<body>
+    <script>
+        'use strict';
+
+        //アロー関数 弓矢みたいだから
+        //関数名 = ( , ) => {}
+        // => returnの後はaddTwoNumの計算式
+    
+        // const addTwoNum = (x,y) => {
+        //     return x + y;
+        // }
+        // console.log(addTwoNum(100,421));
+
+        //クラスとは
+        //classにはCluculaterという名前の式を入れる
+        //Cluculaterはクラスからインスタンスが生成されたら最初に実行される。
+        //そのあとには使う関数を登録するreturn値にはclassで指定した数値にする。
+        //これは電卓の土台を作っているような感じ、後のインスタンス生成でこの電卓に数値を入れる。
+        class Cluculater {
+            constructor(x,y) {
+                this.x = x;
+                this.y = y;
+            }
+            addTwoNum() {
+                return this.x + this.y;
+            }
+        }
+        //constにCalcを作成し、その中には値が3,4のclass Cluclaterを入れる。
+        //console.logで表示するのは(Calcに入れたCluclaterの中のaddTwoNum、値は3,4)
+        const CalcA = new Cluculater(3,4); //インスタンス生成
+        const CalcB = new Cluculater(5,5); //インスタンス生成
+        console.log(CalcA.addTwoNum());
+        console.log(CalcB.addTwoNum());
+
+        //--------------------------------------------------------------//
+
+
+        
+        //クラスの継承
+        class SuperNaming {
+            constructor() {
+                this.name = "田中";
+            }
+            outputName() {
+                return this.name;
+            }
+        }
+        class SubGreating extends SuperNaming {
+            outputName() {
+                return super.outputName() + "タオル";
+            }
+            outputHello() {
+                return "Hello!!";
+            }
+        }
+        const Greeting = new SubGreating;
+        console.log(Greeting.outputHello() + Greeting.outputName());
+
+        //練習問題
+        class Naming {
+            constructor(name) {
+                this.name = ["山田","田中","林",name]
+            }
+            result(i) {
+                return this.name[i]
+            }
+        }
+        const OutputName = new Naming("佐藤"); //Namingのconst
+        for(let i = 0; i < OutputName.name.length; i++) {
+            console.log(OutputName.result(i));
+        }
+    </script>
+</body>
+</html>
