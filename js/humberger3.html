@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ハンバーガーメニュー3</title>
+    <script src="https://kit.fontawesome.com/f56c159de2.js" crossorigin="anonymous"></script>
+    <style type="text/css">
+        body{
+            padding: 0px;
+            margin: 0px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            overflow-x: hidden; /*画面の縦スクロールを無くす*/
+            overflow-y: hidden; /*画面の横スクロールを無くす*/
+        }
+
+        #main {
+            background-color: whitesmoke;
+            width: 100%;
+            height: 100%;
+            position: absolute; /*絶対指定*/
+            top: 0px; /*マージン、外枠の上部はどこか*/
+            left: 0px; /*マージン　外枠の左はどこか*/
+            padding-top: 50px; /*パディング　内側はどこからはじめるか*/
+            padding-left: 230px; /*パディング　内側はどこからはじめるか*/
+            z-index: 1; /* 重なる順番 */
+            overflow: auto;
+            box-sizing: border-box; /*divのボーダーをボックス要素に含める*/
+        }
+
+        #menu {
+            color: rgb(255, 72, 0);
+            background-color: rgb(255, 230, 0);
+            position: absolute;
+            top: 0px;
+            left: -170px;
+            padding: 8px;
+            width: 180px;
+            min-height: 100%; /*一番小さい高さであってもheightが100%*/
+            z-index: 3; /* 重なる順番 数が大きいほうが上*/
+            transition: 0.4s; /*0.4秒かけて表示するアニメーション*/
+        }
+
+        #filter {
+            background-color: black;
+            opacity: 0.6; /*半透明処理*/
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            display: none; /*ディスプレイに表示しない*/
+            z-index: 2;
+        }
+
+        #open, #close {
+            float: left;
+            cursor: pointer; /*カーソルを合わせるとポインターにする*/
+        }
+
+        /* #close {
+            float: left;
+            cursor: pointer; */
+
+        #filter.menu-open {
+            display: block; /*ディスプレイに表示する*/
+        }
+
+        #menu.menu-open {
+            left: 0;
+        }
+
+        }
+    </style>
+</head>
+<body>
+    <div id="menu">
+        <ul>
+            <li>Menu1</li>
+            <li>Menu2</li>
+            <li>Menu3</li>
+            <li>Menu4</li>
+            <li>Menu5</li>
+        </ul>
+    </div>
+    <div id="main">
+        <h1>モスバーガー</h1>
+        <p>Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello!Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! </p>
+        <p>Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello!Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! </p>
+        <p>Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello!Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! </p>
+        <p>Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello!Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! </p>
+        <p>Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello!Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! </p>
+        <p>Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello!Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! </p>
+        <p>Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello!Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! </p>
+        <p>Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello!Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! </p>
+        <p>Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello!Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! </p>
+    </div>
+    <div id="filter"></div>
+    <script>
+        'use strict';
+
+        const menu = document.getElementById('menu')
+        const filter = document.getElementById('filter')
+
+        menu.addEventListener ('mouseover',() => {
+            menu.className = 'menu-open';
+            filter.className = 'menu-open'
+        });
+           
+        menu.addEventListener ('mouseleave',() => {
+                menu.className = '';
+                filter.className = '';
+        });
+        
+    </script>
+</body>
+</html>
