@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ゲーム</title>
+    <style type="text/css">
+        
+        body{
+            display: flex; /*body全体の並べ方は横*/
+            flex-wrap: wrap; /*折り返しをする*/
+        }
+
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: coral;
+            margin: 0px 8px 8px 0px; /*上0px 右8px 下8px 左0px*/
+            cursor: pointer;
+            transition: 0.6s;
+            line-height: 100px;
+            text-align: center;
+        }
+
+        .atari {
+            background-color: cyan;
+            border-radius: 50px;
+            transform: rotate(120deg);
+        }
+
+        .hazure {
+            transform: scale(0.9); /*大きさを0.9倍*/
+        }
+
+    </style>
+</head>
+<body>
+    <!-- <div class="box" id="target1"></div>
+    <div class="box" id="target2"></div>
+    <div class="box" id="target3"></div> -->
+
+    <script>
+        'use strict';   
+        
+        const num = 5;
+        const hit = Math.floor(Math.random() * num)  // 0 ~ 4の整数をランダムに返す
+
+        for (let i = 0; i < num; i++) {
+            const div = document.createElement('div');
+            div.classList.add('box');
+            //div.textContent = i;
+
+            div.addEventListener('click', () => {
+                if(i === hit) {
+                    div.textContent = "あたり";
+                    div.classList.add('atari');
+                } else {
+                    div.textContent ='はずれ';
+                    div.classList.add('hazure');
+                }
+            })
+
+            document.body.appendChild(div);
+        }
+
+
+        // const target1 = document.getElementById('target1')
+        // const target2 = document.getElementById('target2')
+        // const target3 = document.getElementById('target3')
+
+        // target1.addEventListener('click', () => {
+        //     target1.classList.toggle('circle'); //toggleはオンオフのスイッチ的な
+        // });
+        // target2.addEventListener('click', () => {
+        //     target2.classList.toggle('circle'); //toggleはオンオフのスイッチ的な
+        // });
+        // target3.addEventListener('click', () => {
+        //     target3.classList.toggle('circle'); //toggleはオンオフのスイッチ的な
+        // });
+
+        //javaでdivを作る方法↓
+
+        // for (let i = 0; i < 100; i++) {
+        // const div = document.createElement('div');
+        // div.classList.add("box");
+        // div.textContent = i;
+
+        // div.addEventListener('click', () =>{
+        //     div.classList.toggle('circle');
+        // })
+
+        // document.body.appendChild(div); //ドキュメントのボディの子要素として指定
+        // }
+    </script>
+</body>
+</html>
