@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Competible" content="ie=edge">
+    <title>自己PRサイト</title>
+    <script src="https://kit.fontawesome.com/f56c159de2.js" crossorigin="anonymous"></script>
+    <style type="text/css">
+    
+    body {
+        background-color: #f5f5f5;
+        font-family: Arial, Helvetica, sans-serif;
+        overflow: hidden;
+    }
+    
+    #menu {
+        width: 240px;
+        height: 400px;
+        position: fixed;
+        right: 180px;
+        top: 60px;
+        padding-top: 40px;
+        background-color: rgb(245, 245, 245);
+        box-shadow: 0 10px 25px 0 darkgrey;
+        text-align: center;
+        font-size: 30px;
+        border-radius: 20px;
+        opacity: 0.5;
+    }
+
+    #menu-middle {
+        padding-top: 30px;
+        line-height: 70px;
+        text-align: left;
+        font-size: 20px;
+    }
+
+    #main {
+        width: 1200px;
+        height: 100%;
+        margin-top: 40px;
+        margin-bottom: 90px;
+        margin-left: 150px;
+        padding-top: 20px;
+        padding-bottom: 100px;
+        background-color: rgb(245, 245, 245);
+        box-shadow: 0 10px 25px 0 darkgrey;
+        border-radius: 30px;
+        z-index: 1;
+    }
+
+    .title {
+        margin-top: 50px;
+        margin-bottom: 5px;
+        margin-left: 100px;
+        font-size: 40px;
+    }
+
+    .line {
+        width: 1000px;
+        height: 8px;
+        margin-top: 10px;
+        margin-left: 80px;
+        background-color: #8DC0B1;
+    }
+
+    #image1 {
+        width: 300px;
+        height: 300px;
+        position: absolute;
+        top: 230px;
+        right: 600px;
+        background-image: url("../img/s.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    #image2 {
+        width: 800px;
+        height: 500px;
+        background-image: url("../img/Ninja.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        box-shadow: 0 10px 25px 0 darkgrey;
+        opacity: 0;
+        transition: 0.3s;
+    }
+
+    #image2.view {
+        opacity: 1;
+    }
+
+    .text {
+        width: 950px;
+        height: auto;
+        margin-top: 90px;
+        margin-left: 130px;
+        line-height: 50px;
+        background-color: none;
+        font-size: 25px;
+    }
+
+    .box {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        right: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: none;
+        border-radius: 30px;
+    }
+
+    #arrow {
+        font-size: 70px;
+        cursor: pointer;
+    }
+
+    #filter {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #8DC0B1;
+        z-index: 1;
+        opacity: 2;
+        transition: 0.5s;
+    }
+
+    #filter.end {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    #button {
+        width: 200px;
+        height: 100px;
+        margin: 400px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        background-color: rgb(245, 245, 245);
+        box-shadow: 0 10px 25px 0 rgba(169, 169, 169, 0.664);
+        border-radius: 2%;
+        font-style: oblique;
+        font-size: 35px;
+        cursor: pointer;
+    }
+
+    #body.scroll {
+        overflow: visible;
+    }
+
+    .image3 {
+        width: 300px;
+        height: 300px;
+        position: absolute;
+        left: 780px;
+        top: 100px;
+        background-image: url(../img/clickhere.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    </style>
+</head>
+<body id="body">
+    <div id="filter">
+        <div class="image3"></div>
+        <div id="button">WELCOME</div>
+    </div>
+    <div id="menu">MENU
+        <ul id="menu-middle">
+            <li><a href="#link1">PROFILE</a></li>
+            <li><a href="#link2">タイピング</a></li>
+            <li><a href="#link3">苦手の克服</a></li>
+        </ul>
+    </div>
+    <div id="main" >
+    <div class="title" id="link1">PROFILE</div>
+    <div class="line"></div>
+    <div id="image1"></div>
+        <div class="text">
+            氏名:山本 信介 <br>
+             生年月日:1998年 8月 30日 <br>
+             趣味:音楽分析、楽器演奏 <br>
+             大切にしていること:楽しむことを忘れないこと<br>
+            <br>
+            <br>
+            <ul>
+                 <li>東京都立 橘高等学校 卒業</li>
+                 <li>東洋学園大学 現代経営学部 現代経営学科 卒業</li>
+                 <li>ゼミではデジタル化した近年のビジネスを研究</li>
+                 <li>インターカレッジゼミでは電子マネーの今後を研究し発表</li>
+                 <li>学内のプレゼンテーションコンテストで賞を獲得</li>
+                 <li>令和3年 フォース株式会社に入社</li>
+            </ul>
+        </div>
+    </div>
+    <div id="main">
+    <div class="title" id="link2">タイピング</div>
+    <div class="line"></div>
+        <div class="text">
+            　私はパソコンを使い、友人が所属する団体の旅のしおりを作成したり、
+            画像編集や映像編集といったパソコンでの作業をいくつかおこなってきました。<br>
+            このような経験から特に成長し、特技だと思っているのはタイピングです。<br>
+            <br>
+            <div id="image2"></div>
+            <br>
+            技術研修中におこなったe-typingではNinjaを記録することができました。<br>
+            研修中にもタイピングのスピード向上やミスの低下など少しずつ成長している実感があります。<br>
+            これからも成長し続け、タイピングの正確性と速度を更新していきたいと思っています。<br>
+            <br>
+            <br>
+        </div>
+    </div>
+
+    <div id="main">
+    <div class="title" id="link3">苦手の克服、挑戦する大切さ</div>
+    <div class="line"></div>
+        <div class="text">
+            　私の通っていた大学はプレゼンテーションを主体とした授業が多く、<br>
+            様々な場面でプレゼンテーションをおこないました。<br>
+            <br>
+            　特に所属していたゼミでは自分の学習した事柄をプレゼンテーションで全体共有する方式で進行していました。
+            インターカレッジ形式で他大学のビジネス系ゼミと合同でプレゼンテーション発表会をするなど、
+            プレゼンテーションをする機会が多くありました。<br>
+            他にもプレゼンテーションとパワーポイントを学習するためのゼミ合宿をおこない、<br>
+            多くの技術を学びました。<br>
+            大学に入る前は人前でなにかを発表することは苦手だったのですが、<br>
+            この大学での経験からプレゼンテーションに自信を持てるようになりました。<br>
+            <br>
+            　そこで私はプレゼンテーションを使ってなにかできないかと考え、
+            学内のプレゼンテーションのコンテストに出場しました。
+            <br>
+            出場者とプレゼンテーションの練習をしたり、ゼミの先生方と構成を考え、
+            出場した結果、優勝することができました。<br>
+            <br>
+            　大学に入学する前はあまり好きでなかった人前に出て発表することを、
+            様々なめぐりあいと経験から自信を持つことができ、さらにコンテストで優勝することができました。<br>
+            私はこのような経験から「自信を持つことの重要さ」と、「挑戦する精神」を学びました。<br>
+            <br>
+            　フォース株式会社に入社し、プレゼンテーションをする機会はあまりないとは思いますが、
+            こういった経験から学んだ「自信を持つこと」、「挑戦する精神」は変わらずに大切にしたいと思っています。
+            新しい技術を学び続け、早い期間で変わり続ける環境へ挑戦し、それらに自信をもって業務に挑むという点では
+            この経験から学んだことを最大限に活かして業務へ貢献したいと思っています。
+        </div>
+    </div>
+    <div class="box"><i class="fas fa-angle-double-up" id="arrow"></i></div>
+    <script>
+        'use strict';
+
+        const body = document.getElementById('body');
+        const filter = document.getElementById('filter');
+        const button = document.getElementById('button');
+
+        button.addEventListener('click', () => {
+            body.className = 'scroll';
+            filter.className = 'end';
+        });
+
+        window.addEventListener('scroll', () => {
+             console.log("横スクロール：" + window.scrollX);
+             console.log("縦スクロール：" + window.scrollY);
+        });
+        // 目標縦スクロール 1000
+
+        const image2 = document.getElementById('image2');
+
+        window.addEventListener('load', () => {
+
+            image2.style.visibility = 'hidden';
+
+            image2.addEventListener('transitionend', () => {
+                if( image2.className != 'view' ) {
+                    image2.style.visibility = 'hidden';
+                    }
+                });
+
+            window.addEventListener('scroll', () => {
+                if( 1100 < window.scrollY ) {
+                    image2.style.visibility = 'visible';
+                    image2.classList.add('view');
+                 } else {
+                    image2.classList.remove('view');
+                 }
+            });
+	    });
+
+        const arrow = document.getElementById('arrow');
+
+        arrow.addEventListener('click', () => {
+                scrollTo(0, 0);
+        });
+
+    </script>
+</body>
+</html>
